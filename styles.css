@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+button {
+    padding: 20px 40px;
+    font-size: 32px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px; /* 버튼 간 간격 */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ff0000; /* 빨간색 배경 */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+#result {
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.shuffling {
+    animation: shuffle 1s infinite;
+}
+
+@keyframes shuffle {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.sparkle {
+    animation: sparkle 0.5s ease-out;
+}
+
+@keyframes sparkle {
+    0% { box-shadow: 0 0 0 rgba(255, 215, 0, 0); }
+    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+    100% { box-shadow: 0 0 0 rgba(255, 215, 0, 0); }
+}
+
+.history {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.history h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#historyList li {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #666;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    position: relative; /* 삭제 버튼 위치를 위한 부모 설정 */
+}
+
+.number-item {
+    display: inline-block;
+    min-width: 40px; /* 각 숫자에 고정 폭 설정 */
+    text-align: right; /* 숫자를 오른쪽 정렬 */
+    margin-right: 10px; /* 숫자 간 간격 */
+}
+
+.history-number {
+    font-weight: bold;
+    color: #000;
+    margin-right: 15px; /* 번호와 숫자 사이 간격 */
+}
+
+.delete-button {
+    margin-left: 15px; /* 기록과 버튼 간 간격 */
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545; /* 빨간색 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* 호버 시 더 진한 빨간색 */
+}
